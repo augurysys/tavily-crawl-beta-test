@@ -73,8 +73,8 @@ if __name__ == "__main__":
         max_breadth=100,
         limit=10,
         include_images=False,
-        # select_paths=["*.pdf"],
-        categories=['manual pdfs', 'data sheet pdfs'], 
+        # select_paths=[".*pdf"],
+        categories=['Media'], 
         extract_depth="advanced")
     print(f"Status Code: {response.status_code}")
     if response.status_code != 200:
@@ -101,4 +101,6 @@ if __name__ == "__main__":
         # if it's a pdf, save as pdf
         if document["url"].endswith(".pdf"):
             with open(os.path.join(path_dir, f"{file_name}.pdf"), "wb") as f:
-                f.write(document["raw_content"])
+                # download the pdf
+                response = requests.get(document["url"])
+                f.write(response.content)

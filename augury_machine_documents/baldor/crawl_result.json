@@ -2,22 +2,21 @@
     "success": true,
     "metadata": {
         "crawl_outcome": "No URLs found for config",
-        "response_time": 0.04566359519958496
+        "response_time": 0.04488968849182129
     },
     "config": {
-        "url": "https://www.baldor.com/catalog/",
+        "url": "https://www.baldor.com/",
         "max_depth": 5,
         "max_breadth": 100,
+        "limit": 10,
         "include_images": false,
         "extract_depth": "advanced",
         "select_paths": null,
         "select_domains": null,
         "allow_external": false,
         "categories": [
-            "manual pdfs",
-            "data sheet pdfs"
-        ],
-        "limit": 10
+            "Media"
+        ]
     },
     "data": []
 }
