@@ -66,14 +66,13 @@ def tavily_crawl(
 # Example usage
 if __name__ == "__main__":
     # base_url = "https://www.rossi.com/en/Products/Industrial-Gear-Units/G-Series/"
-    base_url = "https://www.baldor.com/catalog/"
+    base_url = "https://www.baldor.com/catalog#category=69"
     response = tavily_crawl(
         url=base_url, 
         max_depth=5, 
         max_breadth=100,
-        limit=10,
         include_images=False,
-        # select_paths=[".*pdf"],
+        select_paths=[".*pdf"],
         categories=['Media'], 
         extract_depth="advanced")
     print(f"Status Code: {response.status_code}")

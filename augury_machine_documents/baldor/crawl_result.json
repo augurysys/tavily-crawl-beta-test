@@ -2,16 +2,18 @@
     "success": true,
     "metadata": {
         "crawl_outcome": "No URLs found for config",
-        "response_time": 0.04488968849182129
+        "response_time": 0.051070451736450195
     },
     "config": {
-        "url": "https://www.baldor.com/",
+        "url": "https://www.baldor.com/catalog#category=69",
         "max_depth": 5,
         "max_breadth": 100,
-        "limit": 10,
+        "limit": 50,
         "include_images": false,
         "extract_depth": "advanced",
-        "select_paths": null,
+        "select_paths": [
+            ".*pdf"
+        ],
         "select_domains": null,
         "allow_external": false,
         "categories": [
